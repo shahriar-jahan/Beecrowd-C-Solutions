@@ -1,0 +1,23 @@
+#include <stdio.h>
+
+int main() {
+    int t;
+    scanf("%d", &t);
+
+    int n[1000];
+    int val = 0;
+
+    for (int i = 0; i < 1000; i++) {
+        n[i] = val;
+        val++;
+        if (val == t) {
+            val = 0;
+        }
+    }
+
+    for (int i = 0; i < 1000; i++) {
+        printf("N[%d] = %d\n", i, n[i]);
+    }
+
+    return 0;
+}
